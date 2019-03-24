@@ -8,3 +8,12 @@ const filteredItems = items.slice(0, i-1).concat(items.slice(i, items.length));
 // ["a", "b", "d", "e", "f"]
 
 ```
+
+REMOVE AN ITEM YOU KNOW ITS VALUE
+
+```javascript
+const items = ['a', 'b', 'c', 'd', 'e', 'f'];
+const valueToRemove = 'c';
+const filteredItems = items.filter(item => item !== valueToRemove);
+// ["a", "b", "d", "e", "f"]
+```
