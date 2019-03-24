@@ -25,3 +25,41 @@ const valuesToRemove = ['c', 'd'];
 const filteredItems = items.filter(item => !valuesToRemove.includes(item));
 // ["a", "b", "e", "f"]
 ```
+
+INDEXOF() Returns the index of the first matching item found, or -1 if not found
+```javascript
+const arr = ['a', 'b', 'c'];
+console.log(arr.indexOf('b'));
+```
+
+LASTINDEXOF()  Returns the index of the last matching item found, or -1 if not found
+```javascript
+const arr = ['a', 'b', 'c', 'c'];
+console.log(arr.lastIndexOf('c'));
+```
+
+FIND()  Returns the first item that returns true. Returns undefined if not found.
+```javascript
+const objArr = [{name:'a'},{name:'b'},{name:'c'}];
+const res = objArr.find(x => x.name === 'c'); 
+```
+
+FINDINDEX()  returns the index of the first item that returns true, and if not found, it
+
+```javascript
+const result = arr.findIndex((element, index, array) => {
+    //return true or false
+    if(element === 'c'){
+        return true
+    }
+});
+
+console.log(result)
+```
+
+INCLUDES() returns a true boolean value if the element is included in the array, or false otherwise:
+```javascript
+if ([1,2].includes(2)) {
+    console.log('found')
+}
+```
