@@ -63,3 +63,34 @@ if ([1,2].includes(2)) {
     console.log('found')
 }
 ```
+
+Sort by a custom function
+```javascript
+const a = [1, 10, 3, 2, 11]
+a.sort((a, b) => a - b) //1, 2, 3, 10, 11
+```
+
+FOREACH
+```javascript
+a.forEach(v => {
+    console.log(v)
+})
+```
+
+FOR..OF
+```javascript
+for (let v of a) {
+    console.log(v)
+}
+```
+
+SORT AN ARRAY OF OBJECTS BY A PROPERTY VALUE
+```javascript
+const list = [
+    { color: 'white', size: 'XXL' },
+    { color: 'red', size: 'XL' },
+    { color: 'black', size: 'M' }
+];
+
+list.sort((a, b) => (a.color > b.color) ? 1 : -1);
+```
