@@ -201,3 +201,18 @@ const myDog = Object.seal(dog);
 dog.breed = 'Pug';
 dog.name = 'Roger'; //TypeError: Cannot add property name, object is not extensible
 ```
+OBJECT.VALUES()
+```javascript
+const person = { name: 'Fred', age: 87 };
+Object.values(person); // ['Fred', 87]
+//
+const people = ['Fred', 'Tony'];
+Object.values(people) // ['Fred', 'Tony']
+```
+
+OBJECT.HASOWNPROPERTY()
+```javascript
+const person = { name: 'Fred', age: 87 };
+person.hasOwnProperty('name'); //true
+person.hasOwnProperty('job'); //false
+```
