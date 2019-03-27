@@ -216,3 +216,10 @@ const person = { name: 'Fred', age: 87 };
 person.hasOwnProperty('name'); //true
 person.hasOwnProperty('job'); //false
 ```
+
+#Numbers
+
+```javascript
+new Number(21.2).toFixed(); //21
+new Number(21.2).toFixed(2); //21.20
+```
