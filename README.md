@@ -223,3 +223,52 @@ person.hasOwnProperty('job'); //false
 new Number(21.2).toFixed(); //21
 new Number(21.2).toFixed(2); //21.20
 ```
+
+DATE.PARSE()
+
+```javascript
+Date.parse('July 22, 2018 07:22:13') //1532236933000
+
+Date.now() //get timestamp
+
+const date = new Date('July 22, 2018 07:22:13');
+date.setMonth(10);
+console.log(date, date.getTime());
+
+```
+
+JSON
+```javascript
+const obj = {name: 'Test Name', year: 2019};
+const objStr = JSON.stringify(obj); // string {"name":"Test Name","year":2019}
+const objAgain = JSON.parse(objStr)  // object { name: 'Test Name', year: 2019 }
+```
+
+STRING
+```javascript
+'JavaScript'.endsWith('Script') //true
+'JavaScript'.includes('aSc') //true
+'JavaScript'.indexOf('aSc') //3
+'JavaScript'.indexOf('aSc') //3
+'JavaScript'.replace('Java', 'Type') //'TypeScript'
+'JavaScript JavaX'.replace(/Java/g, 'Type') //'TypeScript TypeX'
+'JavaScript'.replace(/Java/, (match, index, originalString) => {
+    console.log(match, index, originalString)
+    return 'Test'
+}) //TestScript
+'JavaScript'.search('Script') //4
+'JavaScript'.search(/Script/) //4
+'This is my car'.slice(5) //is my car 
+'This is my car'.slice(5, 10) //is my
+'This is my car'.slice(-6) //my car
+'testing'.startsWith('test') //true
+'going on testing'.startsWith('test', 9) //true
+'This is my car'.substring(5, 10) //'is my' negative integer convert to 0
+
+const str = new String('Test')
+str.toString() //'Test'
+' Testing '.trim() //'Testing'
+'Testing '.trimEnd() //'Testing'
+' Testing '.trimStart() //'Testing '
+
+```
