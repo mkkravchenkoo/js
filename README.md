@@ -272,3 +272,14 @@ str.toString() //'Test'
 ' Testing '.trimStart() //'Testing '
 
 ```
+MATH
+```javascript
+Math.ceil(2.1) //3
+Math.ceil(2.5) //3
+Math.floor(2.99999) //2
+Math.max(1,2,3,4,5) //5
+Math.max(1,2,3,4,5) //1
+Math.pow(2, 4) //16
+Math.sqrt(16) //4
+
+```
