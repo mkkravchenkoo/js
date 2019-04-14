@@ -283,3 +283,53 @@ Math.pow(2, 4) //16
 Math.sqrt(16) //4
 
 ```
+
+REGULAR EXPRESSIONS
+```javascript
+const rel = new RegExp('hey');
+const rel2 = /hey/;
+console.log(rel.test('hey'))
+console.log(rel2.test('hey'))
+
+const reg1 = /^hey.*joe$/; // '^' - from start, '$' - from end, '.*' any 
+reg1.test('hey how are you joe')
+
+// • \d matches any digit, equivalent to [0-9]
+// • \D matches any character that’s not a digit, equivalent to [^0-9]
+// • \w matches any alphanumeric character (plus underscore), equivalent to [A-Za-z_0-9]
+// • \W matches any non-alphanumeric character, anything except [^A-Za-z_0-9]
+// • \s matches any whitespace character: spaces, tabs, newlines and Unicode spaces
+// • \S matches any character that’s not a whitespace
+
+const regNumbers = /^\d+$/;
+regNumbers.test('12') // find numbers
+
+const betweenItems = /^\d{3,5}$/;
+betweenItems.test('5555') 
+
+const nLeng = /^\d{3}$/;
+nLeng.test('123') //
+
+var str = "Ай-ОЙ-Ой-ой-ой";
+str.match( /ой/ ); // [совпадение,  позиция,  вся поисковая строка]
+str.match( /(ой)/ ); // [всё совпадение полностью,  часть совпадения соответствующая скобкам,  вся поисковая строка,  позиция,  вся поисковая строка]
+str.match( /ой/g ); // ["ой", "ой"] При наличии флага g, вызов match возвращает обычный массив из всех совпадений.
+//В случае, если совпадений не было, match возвращает null
+
+'12-34-56'.replace( /-/g, ":" ); // 12:34:56 - Швейцарский нож для работы со строками, поиска и замены любого уровня сложности.
+var str = "Василий Пупкин";
+str.replace(/(Василий) (Пупкин)/, '$2, $1') // Пупкин, Василий
+str.replace(/Василий Пупкин/, 'Великий $&!') // Великий Василий Пупкин!
+
+
+/hey|ho/.exec('hey') // [ "hey" ]
+/(hey).(ho)/.exec('hey ho') // [ "hey ho", "hey", "ho" ]
+
+alert( "Hello, Java!".match(/\bJava\b/) ); // Java
+alert( "Hello, Javascript!".match(/\bJava\b/) ); // null
+
+"My dog is a good dog!".replace(/dog/g, 'cat') //My cat is a good cat!
+
+/Roger(?= Waters)/.test('Roger is my dog and Roger Waters is a famous musician') //true
+
+```
