@@ -333,3 +333,33 @@ alert( "Hello, Javascript!".match(/\bJava\b/) ); // null
 /Roger(?= Waters)/.test('Roger is my dog and Roger Waters is a famous musician') //true
 
 ```
+Error
+
+[].length = -1 //RangeError: Invalid array length
+
+dog = 2 //ReferenceError: dog is not defined
+
+function() {
+    return 'Hi!'
+} //SyntaxError: function statement requires a name
+
+1() //TypeError: 1 is not a function
+
+TIMERS
+```
+const myFunction = (firstParam, secondParam) => {
+// do something
+}
+
+// runs after 2 seconds
+setTimeout(myFunction, 2000, firstParam, secondParam)
+
+const interval = setInterval(() => {
+    if (App.somethingIWait === 'arrived') {
+        clearInterval(interval)
+            return
+        }
+    // otherwise do things
+}, 100)
+
+```
