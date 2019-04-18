@@ -363,3 +363,45 @@ const interval = setInterval(() => {
 }, 100)
 
 ```
+
+Promise
+```javascript
+const promise = new Promise((resolve, reject) => {
+    const success = true;
+    success ? resolve('this is success') : reject('this is error')
+});
+
+promise
+    .then(res => console.log('result '+ res))
+    .catch(error => console.log(error));
+
+```
+
+FETCH
+```javascript
+const users = fetch('https://jsonplaceholder.typicode.com/todos/1111');
+users
+    .then((u) => {return u.json()})
+    .then((b) => {console.log(b)})
+    .catch((e) => {console.log(e)})
+    .finally(() => console.log('finished'))
+```
+
+ASYNC/AWAIT
+```javascript
+const getUer = async () => {
+    const response = await fetch('https://jsonplaceholder.typicode.com/todos/1');
+    return await response.json();
+};
+
+const user = async () => {
+    try {
+        let myUser = await getUer();
+        console.log(myUser)
+    }catch(e){
+        console.log('Error')
+    }
+};
+
+user();
+```
