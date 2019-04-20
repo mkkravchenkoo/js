@@ -405,3 +405,24 @@ const user = async () => {
 
 user();
 ```
+MAP
+```javascript
+const a = [2,4,8];
+const b = a.map(function (current, index, array) {
+    return current+1;
+});
+```
+FILTER
+```javascript
+const a = [2,4,8];
+const b = a.filter(function (current, index, array) {
+    return current > 3;
+});
+```
+REDUCE
+```javascript
+const a = [2,4,8,-1];
+const b = a.reduce(function (accum, current, index) {
+    return accum+current;
+});
+```
