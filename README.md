@@ -426,3 +426,54 @@ const b = a.reduce(function (accum, current, index) {
     return accum+current;
 });
 ```
+COMPOSITION
+```javascript
+const talker = (state) => ({
+    talk: (...msg) => console.log(msg.join(', '))
+});
+const walker = (state) => ({
+    walk: () => {
+        let num = state.name || state.id;
+        console.log(num, 'walking')
+    }
+});
+const eater = (state) => ({
+    eat: () => {
+        let num = state.name || state.id;
+        console.log(num, 'eating')
+    }
+});
+const wifier = (state) => ({
+    wifi: () => {
+        console.log('Wifi')
+    }
+});
+
+const Person = (name, speed=3) => {
+    let state = { name, speed };
+    return Object.assign(
+            {},
+            talker(state),
+            walker(state),
+            eater(state)
+    )
+};
+
+let person = Person('Bob');
+person.talk('Hi everyone');
+person.walk();
+person.eat();
+
+const Android = (id, speed=2) => {
+    let state = { id,speed };
+    return Object.assign(
+            {},
+            wifier(state),
+            talker(state)
+    )
+};
+
+const robot = Android('R2D2');
+robot.talk('i am robot');
+robot.wifi();
+```
