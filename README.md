@@ -477,3 +477,39 @@ const robot = Android('R2D2');
 robot.talk('i am robot');
 robot.wifi();
 ```
+
+CALL
+```javascript
+var obj = { num:2 }
+
+function addDoThis(a) {
+  return this.num+a;
+}
+
+console.log(addDoThis.call(obj, 3));
+```
+
+APPLY
+```javascript
+var obj = {num:2}
+
+function addDoThis(a, b, c) {
+  return this.num+a+b+c;
+}
+
+console.log(addDoThis.apply(obj, [1,2,3]));
+
+```
+
+BIND
+```javascript
+var obj = { num:2 }
+
+function addDoThis(a) {
+  return this.num+a;
+}
+
+var otherFunc = addDoThis.bind(obj);
+console.log(otherFunc(4));
+
+```
