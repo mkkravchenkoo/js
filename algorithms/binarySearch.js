@@ -5,7 +5,7 @@ const binarySearch = (arr, value) => {
 	let low = 0;
 	let middle = 0;
 
-	while (low < height) {
+	while (low <= height) {
 		middle = Math.floor((height + low)/2);
 		if(arr[middle] === value){
 			return middle;
@@ -20,5 +20,5 @@ const binarySearch = (arr, value) => {
 
 }
 
-const res = binarySearch(arr, 101);
+const res = binarySearch(arr, 100);
 console.log(res)
