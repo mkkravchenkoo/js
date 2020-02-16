@@ -15,7 +15,7 @@ console.log(person.getFullName())
 
 ```
 
-##Class with es6
+## Class with es6
 ```js
 class Person {
 	constructor(name, family){
