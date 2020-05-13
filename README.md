@@ -7,6 +7,8 @@ const i = 3;
 const filteredItems = items.slice(0, i-1).concat(items.slice(i, items.length));
 // ["a", "b", "d", "e", "f"]
 
+items.splice(i, 1); // return deleted item
+// items will be without removed item
 ```
 
 REMOVE AN ITEM YOU KNOW ITS VALUE
